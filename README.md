@@ -9,38 +9,53 @@ contributions are welcome!
 Installation
 ============
 
-`npm install maventa-wsdl`
+`npm i maventa-wsdl`  
+
+Requires Node >= 8.8
 
 Usage
 =====
 
 ```js
-const MaventaClient = require('./maventa-wsdl')
+const MaventaClient = require('maventa-wsdl')
 
-const client = new MaventaBankApi(vendorApiKey, userApiKey, companyUuid, false)
+const client = new MaventaBankApi(vendorApiKey, userApiKey, companyUuid, true)
 
 const hello = await maventaClient.helloWorld()
 //'Hello from Bank API v1.0'
 
 ```
 
+All methods are Promise based.
+
 API
 ============================
 
-Implements the Maventa WSDL methods[https://testing.maventa.com/apis/banks/wsdl]
+Implements the Maventa WSDL methods: https://testing.maventa.com/apis/banks/wsdl
 
-helloWorld()
+### Initializing the client
+`new MaventaBankApi(vendorApiKey, userApiKey, companyUuid, testing, useCompact)`  
+#### Parameters  
+  `vendorApiKey: string` Maventa vendor api key  
+  `userApiKey: string` Maventa user api key  
+  `companyUuid: string` Maventa company unique identifier  
+  `testing: boolean` Testing or production environment, defaults to true  
+  `useCompact: boolean` Whether to use compact xml parsing format, defaults to true  
 
-errorMessageList(from: Date, to:Date)
+### Methods
 
-errorMessageShow( errorMessageId: string)
+`helloWorld()`
 
-messageSend (message: string) 
-(base64 encoded)
+`errorMessageList(from: Date, to:Date)`
 
-messageStatus(messageId: string)
+`errorMessageShow(errorMessageid: string)`
 
-RIMessageList(from: Date, to: Date)
+`messageSend (message: string)` 
+(base64 encoded xml message)
 
-RIMessageShow(messageId: string)
+`messageStatus(messageId: string)`
+
+`RIMessageList(from: Date, to: Date)`
+
+`RIMessageShow(messageId: string)`
 
