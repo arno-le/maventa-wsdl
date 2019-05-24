@@ -1,0 +1,25 @@
+{
+  "name": "maventa-wsdl",
+  "version": "0.0.1",
+  "description": "A convenience wrapper for Maventa WSDL API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygerg/maventa-wsdl.git"
+  },
+  "keywords": [
+    "maventa",
+    "wsdl",
+    "bank",
+    "api"
+  ],
+  "author": "Arno Lehtonen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ygerg/maventa-wsdl/issues"
+  },
+  "homepage": "https://github.com/ygerg/maventa-wsdl#readme"
+}
