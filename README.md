@@ -19,9 +19,9 @@ Usage
 ```js
 const MaventaClient = require('maventa-wsdl')
 
-const client = new MaventaBankApi(vendorApiKey, userApiKey, companyUuid, true)
+const client = new MaventaClient(vendorApiKey, userApiKey, companyUuid, true)
 
-const hello = await maventaClient.helloWorld()
+const hello = await client.helloWorld()
 //'Hello from Bank API v1.0'
 
 ```
