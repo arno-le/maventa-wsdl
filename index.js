@@ -75,7 +75,7 @@ class MaventaBankApi {
 
   /**
    * View a single error message
-   * @param {String} errorMessageId of error message to show
+   * @param {string} errorMessageId of error message to show
    */
   errorMessageShow = async errorMessageId => {
     try {
@@ -100,7 +100,7 @@ class MaventaBankApi {
 
   /**
    * Sends a message (SI / RP)
-   * @param {String} message as base64 string
+   * @param {string} message as base64 string
    */
   messageSend = async message => {
     try {
@@ -113,7 +113,7 @@ class MaventaBankApi {
 
   /**
    * Single message status
-   * @param {UUID} messageId Message to get
+   * @param {string} messageId Message to get
    */
   messageStatus = async function(messageId) {
     try {
@@ -159,7 +159,7 @@ class MaventaBankApi {
 
   /**
    * View a single RIMessage by UUID
-   * @param {UUID} messageId
+   * @param {string} messageId
    */
   RIMessageShow = async messageId => {
     try {
