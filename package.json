@@ -4,7 +4,7 @@
   "description": "A convenience wrapper for Maventa WSDL API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node spec/test.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,13 @@
   },
   "homepage": "https://github.com/ygerg/maventa-wsdl#readme",
   "dependencies": {
-  "moment": "^2.24.0",
-  "soap": "^0.27.1",
-  "xml-js": "^1.6.11"
+    "moment": "^2.24.0",
+    "soap": "^0.27.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jasmine": "^3.5.0",
+    "jasmine-console-reporter": "^3.1.0"
   }
 }

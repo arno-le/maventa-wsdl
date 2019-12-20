@@ -1,10 +1,7 @@
 Introduction
 ============
 
-A convenience wrapper for Maventa WSDL bank API.
-Returns responses as nicely formatted JSON, works for me but might no work for you:
-contributions are welcome!
-
+A convenience wrapper for Maventa WSDL bank API converting SOAP responses to friendly JSON.
 
 Installation
 ============
@@ -19,7 +16,7 @@ Usage
 ```js
 const MaventaClient = require('maventa-wsdl')
 
-const client = new MaventaClient(vendorApiKey, userApiKey, companyUuid, true)
+const client = await new MaventaClient(vendorApiKey, userApiKey, companyUuid, true)
 
 const hello = await client.helloWorld()
 //'Hello from Bank API v1.0'
@@ -34,7 +31,12 @@ API
 Implements the Maventa WSDL methods: https://testing.maventa.com/apis/banks/wsdl
 
 ### Initializing the client
-`new MaventaBankApi(vendorApiKey, userApiKey, companyUuid, testing, useCompact)`  
+As the SOAP client is constructed asynchronously, use `await` to wait for the constructor to complete.  
+
+```js 
+const client = await new MaventaBankApi(vendorApiKey, userApiKey, companyUuid, testing, useCompact)
+```
+  
 #### Parameters  
   `vendorApiKey: string` Maventa vendor api key  
   `userApiKey: string` Maventa user api key  
